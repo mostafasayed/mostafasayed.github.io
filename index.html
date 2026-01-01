@@ -5,99 +5,247 @@
   <title>Mostafa Hanafy | Senior Full Stack Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta name="description" content="Senior Full Stack Engineer with backend expertise in Node.js, TypeScript, microservices, and AWS/Azure. Experienced in building scalable, reliable systems." />
+  <meta name="description" content="Senior Full Stack Engineer specializing in backend systems, data-intensive systems, microservices, Node.js, TypeScript, and AWS." />
+
   <!-- Open Graph / LinkedIn -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Mostafa Hanafy | Senior Full Stack Engineer" />
-  <meta property="og:description" content="Senior Full Stack Engineer specializing in backend systems, microservices, Node.js, TypeScript, and AWS." />
+  <meta property="og:description" content="Backend-focused Senior Full Stack Engineer with experience in microservices, distributed systems, data-intensive systems and AWS." />
   <meta property="og:url" content="https://mostafasayed.github.io/" />
   <meta property="og:image" content="https://mostafasayed.github.io/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  
-  <!-- Twitter (also used by LinkedIn fallback sometimes) -->
+
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Mostafa Hanafy | Senior Full Stack Engineer" />
-  <meta name="twitter:description" content="Backend-focused Senior Full Stack Engineer with experience in microservices, distributed systems, and AWS." />
+  <meta name="twitter:description" content="Backend-focused Senior Full Stack Engineer with experience in microservices, distributed systems, data-intensive systems and AWS." />
   <meta name="twitter:image" content="https://mostafasayed.github.io/og-image.png" />
-
 
   <style>
     :root {
       --bg: #ffffff;
-      --text: #111111;
-      --muted: #555555;
-      --card: #f2f2f2;
-      --link: #0366d6;
+      --text: #0b1220;
+      --muted: #51607a;
+      --card: rgba(255,255,255,0.75);
+      --cardBorder: rgba(15, 23, 42, 0.10);
+      --chip: rgba(15, 23, 42, 0.06);
+      --link: #0b61ff;
+      --shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+      --radius: 16px;
     }
 
     body.dark {
-      --bg: #0f1115;
-      --text: #eaeaea;
-      --muted: #aaaaaa;
-      --card: #1e222a;
+      --bg: #0b1020;
+      --text: #e9eefc;
+      --muted: #a8b3cf;
+      --card: rgba(15, 23, 42, 0.55);
+      --cardBorder: rgba(148, 163, 184, 0.18);
+      --chip: rgba(148, 163, 184, 0.12);
       --link: #58a6ff;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       background: var(--bg);
       color: var(--text);
-      max-width: 760px;
-      margin: 60px auto;
-      padding: 0 16px;
       line-height: 1.6;
-      transition: background 0.3s, color 0.3s;
+      letter-spacing: -0.01em;
+      transition: background 0.25s ease, color 0.25s ease;
     }
 
-    h1 { margin-bottom: 4px; }
-    h3 { margin-top: 36px; }
+    /* Subtle background */
+    .bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(900px 500px at 20% 10%, rgba(11,97,255,0.12), transparent 60%),
+        radial-gradient(800px 450px at 85% 15%, rgba(16,185,129,0.10), transparent 60%),
+        radial-gradient(700px 500px at 50% 90%, rgba(168,85,247,0.08), transparent 60%);
+      filter: blur(0px);
+      opacity: 1;
+    }
 
-    .role {
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 40px 18px 70px;
+      position: relative;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      border: 1px solid var(--cardBorder);
+      background: var(--card);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 999px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      transition: transform 0.15s ease, background 0.25s ease;
+      user-select: none;
+    }
+    .toggle:hover { transform: translateY(-1px); }
+
+    .hero {
+      border: 1px solid var(--cardBorder);
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 22px 22px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .name {
+      font-size: clamp(32px, 4.5vw, 46px);
+      line-height: 1.1;
+      margin: 0 0 10px;
+      letter-spacing: -0.03em;
+    }
+
+    .subtitle {
+      margin: 0 0 14px;
       color: var(--muted);
-      margin-bottom: 24px;
-      font-weight: 500;
+      font-weight: 600;
     }
 
-    .stack span {
-      background: var(--card);
-      padding: 6px 10px;
-      border-radius: 6px;
-      margin-right: 6px;
-      margin-bottom: 6px;
-      display: inline-block;
+    .summary {
+      margin: 0;
+      color: var(--text);
+      max-width: 72ch;
+    }
+
+    .metaRow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+      align-items: center;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--cardBorder);
+      background: rgba(255,255,255,0.4);
+      color: var(--muted);
       font-size: 14px;
+      backdrop-filter: blur(10px);
+    }
+    body.dark .pill { background: rgba(15, 23, 42, 0.35); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+    @media (max-width: 920px) {
+      .grid { grid-template-columns: 1fr; }
     }
 
-    .project {
+    .card {
+      border: 1px solid var(--cardBorder);
       background: var(--card);
-      padding: 16px;
-      border-radius: 8px;
-      margin-bottom: 16px;
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
     }
+
+    h2 {
+      font-size: 18px;
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chip {
+      background: var(--chip);
+      border: 1px solid var(--cardBorder);
+      padding: 8px 10px;
+      border-radius: 12px;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .projects .project {
+      border: 1px solid var(--cardBorder);
+      border-radius: 14px;
+      padding: 14px 14px;
+      background: rgba(255,255,255,0.35);
+      margin-bottom: 12px;
+    }
+    body.dark .projects .project {
+      background: rgba(15, 23, 42, 0.35);
+    }
+
+    .projectTitle {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+      margin-bottom: 6px;
+    }
+
+    .projectTitle strong { font-size: 16px; }
+    .projectTitle span {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    ul { margin: 10px 0 0 18px; color: var(--text); }
+    li { margin: 6px 0; }
 
     a {
       color: var(--link);
       text-decoration: none;
+      font-weight: 600;
     }
-
     a:hover { text-decoration: underline; }
 
-    .top-bar {
+    .links {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 8px;
     }
 
-    .toggle {
-      cursor: pointer;
-      border: none;
-      background: var(--card);
-      color: var(--text);
-      padding: 6px 10px;
-      border-radius: 6px;
-      font-size: 14px;
+    .linkBtn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--cardBorder);
+      background: rgba(255,255,255,0.35);
     }
+    body.dark .linkBtn { background: rgba(15, 23, 42, 0.35); }
 
     /* ATS-only keywords */
     .ats-keywords {
@@ -109,75 +257,155 @@
     }
   </style>
 </head>
+
 <body>
+  <div class="bg"></div>
 
-  <div class="top-bar">
-    <div>
-      <h1>Mostafa Hanafy</h1>
-      <div class="role">
-        Senior Full Stack Engineer | Backend-Focused | Node.js & TypeScript
-      </div>
+  <div class="container">
+    <div class="header">
+      <div style="height: 1px;"></div>
+      <button class="toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">
+        <span id="toggleIcon">🌙</span>
+        <span id="toggleText">Dark</span>
+      </button>
     </div>
-    <button class="toggle" onclick="toggleDarkMode()">🌙 Dark</button>
-  </div>
 
-  <p>
-    Senior Full Stack Engineer with strong backend expertise in building
-    scalable, reliable, and maintainable systems. Specialized in
-    microservices architecture, REST APIs, event-driven systems,
-    and cloud infrastructure on AWS/Azure.
-  </p>
+    <section class="hero">
+      <h1 class="name">Mostafa Hanafy</h1>
+      <p class="subtitle">Senior Full Stack Engineer · Backend-Focused · Node.js & TypeScript</p>
+      <p class="summary">
+        I build scalable backend systems and modern web applications with a focus on clean architecture,
+        reliability, and production readiness (microservices, REST APIs, event-driven workflows, cloud on AWS/Azure).
+      </p>
 
-  <h3>Core Skills</h3>
-  <div class="stack">
-    <span>Node.js</span>
-    <span>TypeScript</span>
-    <span>React</span>
-    <span>Next</span>
-    <span>Nest</span>
-    <span>Microservices</span>
-    <span>REST APIs</span>
-    <span>AWS</span>
-    <span>Docker</span>
-    <span>Event-Driven Architecture</span>
-    <span>Clean Architecture</span>
-    <span>Observability</span>
-  </div>
+      <div class="metaRow">
+        <div class="pill">✅ Microservices & Distributed Systems</div>
+        <div class="pill">✅ Observability & Reliability</div>
+        <div class="pill">✅ AWS · Docker · Kubernetes · CI/CD</div>
+      </div>
+    </section>
 
-  <h3>Resume</h3>
-  <p>
-    📄 <a href="/Mostafa-Hanafy-Resume.pdf" target="_blank">Download PDF Resume</a>
-  </p>
+    <div class="grid">
+      <section class="card">
+        <h2>Core Skills</h2>
+        <div class="chips">
+          <span class="chip">Node.js</span>
+          <span class="chip">TypeScript</span>
+          <span class="chip">React</span>
+          <span class="chip">Next.js</span>
+          <span class="chip">NestJS</span>
+          <span class="chip">Microservices</span>
+          <span class="chip">REST APIs</span>
+          <span class="chip">Event-Driven Architecture</span>
+          <span class="chip">Clean Architecture</span>
+          <span class="chip">Observability</span>
+          <span class="chip">AWS</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Kubernetes</span>
+        </div>
+      </section>
 
-  <h3>Links</h3>
-  <p>
-    <a href="https://github.com/mostafasayed">GitHub</a> ·
-    <a href="https://www.linkedin.com/in/mostafa-s-hanafy/">LinkedIn</a> ·
-    <a href="mailto:mostafa.s.hanafy@gmail.com">Email</a>
-  </p>
+      <section class="card">
+        <h2>Resume</h2>
+        <p style="margin: 0; color: var(--muted);">
+          One-page PDF, ATS-friendly.
+        </p>
+        <div class="links" style="margin-top: 12px;">
+          <a class="linkBtn" href="/Mostafa-Hanafy-Resume.pdf" target="_blank" rel="noopener">
+            📄 Download PDF Resume
+          </a>
+        </div>
 
-  <!-- ATS Keywords (hidden visually, readable by bots) -->
-  <div class="ats-keywords">
-    Senior Full Stack Engineer, Backend Engineer, Node.js Developer,
-    TypeScript Developer, Microservices Architecture, REST APIs,
-    Event Driven Architecture, AWS, Docker, Kubernetes,
-    Clean Architecture, Domain Driven Design, Observability,
-    Distributed Systems, CI/CD, PostgreSQL, System Design
+        <h2 style="margin-top: 18px;">Links</h2>
+        <div class="links">
+          <a class="linkBtn" href="https://github.com/mostafasayed" target="_blank" rel="noopener">🐙 GitHub</a>
+          <a class="linkBtn" href="https://linkedin.com/in/mostafa-s-hanafy" target="_blank" rel="noopener">💼 LinkedIn</a>
+          <a class="linkBtn" href="mailto:mostafa.s.hanafy@gmail.com">✉️ Email</a>
+        </div>
+      </section>
+    </div>
+
+    <section class="card" style="margin-top: 18px;">
+      <h2>Writing & Knowledge Sharing</h2>
+
+      <div class="project">
+        <div class="projectTitle">
+          <strong>Idempotency in Distributed Systems (Node.js)</strong>
+          <span>LinkedIn Post</span>
+        </div>
+        <div style="color: var(--muted);">
+          Explains why idempotency matters, common pitfalls, and how to implement it safely
+          in backend systems.
+        </div>
+        <div style="margin-top: 8px;">
+          <a href="https://www.linkedin.com/posts/mostafa-s-hanafy_what-is-idempotency-and-why-does-it-matter-activity-7408184789964443649-JZe4?utm_source=share&utm_medium=member_desktop&rcm=ACoAABDkWNEBxUCEvScdvUzQC57bvaxHQD8Ir2o"
+             target="_blank" rel="noopener">
+            Read on LinkedIn →
+          </a>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="projectTitle">
+          <strong>Correlation IDs & Observability in Microservices</strong>
+          <span>LinkedIn Post</span>
+        </div>
+        <div style="color: var(--muted);">
+          Shows how to trace requests across services using correlation IDs and structured logging.
+        </div>
+        <div style="margin-top: 8px;">
+          <a href="https://www.linkedin.com/posts/mostafa-s-hanafy_nestjs-interceptor-that-enforces-and-propagates-activity-7412007859015794688-j175?utm_source=share&utm_medium=member_desktop&rcm=ACoAABDkWNEBxUCEvScdvUzQC57bvaxHQD8Ir2o"
+             target="_blank" rel="noopener">
+            Read on LinkedIn →
+          </a>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="projectTitle">
+          <strong>Circuit Breakers Explained with Real Node.js Code</strong>
+          <span>LinkedIn Post</span>
+        </div>
+        <div style="color: var(--muted);">
+          Practical breakdown of circuit breakers, retries, and timeouts in real production systems.
+        </div>
+        <div style="margin-top: 8px;">
+          <a href="https://www.linkedin.com/posts/mostafa-s-hanafy_minimal-circuit-breaker-to-prevent-cascading-activity-7411269676569186304-hak1?utm_source=share&utm_medium=member_desktop&rcm=ACoAABDkWNEBxUCEvScdvUzQC57bvaxHQD8Ir2o"
+             target="_blank" rel="noopener">
+            Read on LinkedIn →
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ATS Keywords (hidden visually, readable by bots) -->
+    <div class="ats-keywords">
+      Senior Full Stack Engineer, Backend Engineer, Node.js Developer, TypeScript Developer, Microservices,
+      Distributed Systems, REST API, GraphQL, Event Driven Architecture, Message Queue, RabbitMQ, Kafka,
+      Clean Architecture, DDD, CQRS, Observability, Logging, Tracing, Correlation ID, AWS, Docker, Kubernetes,
+      CI/CD, GitHub Actions, PostgreSQL, Redis, System Design, Performance, Reliability Engineering
+    </div>
   </div>
 
   <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark");
-      localStorage.setItem(
-        "theme",
-        document.body.classList.contains("dark") ? "dark" : "light"
-      );
+    function setToggleLabel() {
+      const isDark = document.body.classList.contains("dark");
+      document.getElementById("toggleIcon").textContent = isDark ? "☀️" : "🌙";
+      document.getElementById("toggleText").textContent = isDark ? "Light" : "Dark";
     }
 
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+      setToggleLabel();
+    }
+
+    // Persist theme
     if (localStorage.getItem("theme") === "dark") {
       document.body.classList.add("dark");
     }
+    setToggleLabel();
   </script>
-
 </body>
 </html>
