@@ -246,6 +246,38 @@
       background: rgba(255,255,255,0.35);
     }
     body.dark .linkBtn { background: rgba(15, 23, 42, 0.35); }
+    .writing-item {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--cardBorder);
+    }
+    
+    .writing-item:last-child {
+      border-bottom: none;
+    }
+    
+    .writing-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
+    
+    .writing-header strong {
+      font-size: 16px;
+    }
+    
+    .writing-header a {
+      font-size: 14px;
+      color: var(--link);
+      white-space: nowrap;
+    }
+    
+    .writing-desc {
+      margin: 6px 0 0;
+      color: var(--muted);
+      max-width: 85%;
+    }
+
 
     /* ATS-only keywords */
     .ats-keywords {
@@ -308,7 +340,6 @@
       <section class="card">
         <h2>Resume</h2>
         <p style="margin: 0; color: var(--muted);">
-          One-page PDF, ATS-friendly.
         </p>
         <div class="links" style="margin-top: 12px;">
           <a class="linkBtn" href="/Mostafa-Hanafy-Resume.pdf" target="_blank" rel="noopener">
@@ -327,58 +358,48 @@
 
     <section class="card" style="margin-top: 18px;">
       <h2>Writing & Knowledge Sharing</h2>
-
-      <div class="project">
-        <div class="projectTitle">
+    
+      <div class="writing-item">
+        <div class="writing-header">
           <strong>Idempotency in Distributed Systems (Node.js)</strong>
-          <span>LinkedIn Post</span>
-        </div>
-        <div style="color: var(--muted);">
-          Explains why idempotency matters, common pitfalls, and how to implement it safely
-          in backend systems.
-        </div>
-        <div style="margin-top: 8px;">
           <a href="https://www.linkedin.com/posts/mostafa-s-hanafy_what-is-idempotency-and-why-does-it-matter-activity-7408184789964443649-JZe4?utm_source=share&utm_medium=member_desktop&rcm=ACoAABDkWNEBxUCEvScdvUzQC57bvaxHQD8Ir2o"
              target="_blank" rel="noopener">
-            Read on LinkedIn →
+            Read →
           </a>
         </div>
+        <p class="writing-desc">
+          Why idempotency matters, common pitfalls, and how to implement it safely
+          in backend systems.
+        </p>
       </div>
-
-      <div class="project">
-        <div class="projectTitle">
+    
+      <div class="writing-item">
+        <div class="writing-header">
           <strong>Correlation IDs & Observability in Microservices</strong>
-          <span>LinkedIn Post</span>
-        </div>
-        <div style="color: var(--muted);">
-          Shows how to trace requests across services using correlation IDs and structured logging.
-        </div>
-        <div style="margin-top: 8px;">
           <a href="https://www.linkedin.com/posts/mostafa-s-hanafy_nestjs-interceptor-that-enforces-and-propagates-activity-7412007859015794688-j175?utm_source=share&utm_medium=member_desktop&rcm=ACoAABDkWNEBxUCEvScdvUzQC57bvaxHQD8Ir2o"
              target="_blank" rel="noopener">
-            Read on LinkedIn →
+            Read →
           </a>
         </div>
+        <p class="writing-desc">
+          How to trace requests across services using correlation IDs and structured logging.
+        </p>
       </div>
-
-      <div class="project">
-        <div class="projectTitle">
+    
+      <div class="writing-item">
+        <div class="writing-header">
           <strong>Circuit Breakers Explained with Real Node.js Code</strong>
-          <span>LinkedIn Post</span>
-        </div>
-        <div style="color: var(--muted);">
-          Practical breakdown of circuit breakers, retries, and timeouts in real production systems.
-        </div>
-        <div style="margin-top: 8px;">
           <a href="https://www.linkedin.com/posts/mostafa-s-hanafy_minimal-circuit-breaker-to-prevent-cascading-activity-7411269676569186304-hak1?utm_source=share&utm_medium=member_desktop&rcm=ACoAABDkWNEBxUCEvScdvUzQC57bvaxHQD8Ir2o"
              target="_blank" rel="noopener">
-            Read on LinkedIn →
+            Read →
           </a>
         </div>
+        <p class="writing-desc">
+          Practical breakdown of circuit breakers, retries, and timeouts in production systems.
+        </p>
       </div>
-
     </section>
-
+    
     <!-- ATS Keywords (hidden visually, readable by bots) -->
     <div class="ats-keywords">
       Senior Full Stack Engineer, Backend Engineer, Node.js Developer, TypeScript Developer, Microservices,
