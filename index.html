@@ -269,6 +269,38 @@
       font-size: 14px;
     }
 
+    /* Projects */
+    .proj-item { padding: 18px 0; border-top: 1px solid var(--line); }
+    .proj-item:first-of-type { border-top: none; padding-top: 4px; }
+    .proj-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      display: inline-flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    a.proj-title:hover { color: var(--accent); text-decoration: none; }
+    .proj-title .src {
+      font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--muted);
+    }
+    .proj-desc { margin: 7px 0 0; color: var(--muted); max-width: 68ch; font-size: 14.5px; }
+    .proj-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 11px; }
+    a.proj-pkg {
+      font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+      font-size: 12.5px;
+      font-weight: 400;
+      padding: 5px 9px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      color: var(--muted);
+      background: var(--panel);
+    }
+    a.proj-pkg:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+
     /* Skills — grouped */
     .skill-group { margin-bottom: 20px; }
     .skill-group:last-child { margin-bottom: 0; }
@@ -432,6 +464,26 @@
     </section>
 
     <section class="block">
+      <h2>Projects</h2>
+
+      <div class="proj-item">
+        <span class="proj-title">AI Request Layer <span class="src">open source</span></span>
+        <p class="proj-desc">A modular toolkit of npm packages for building reliable, observable, and cost-efficient LLM applications in production.</p>
+        <div class="proj-links">
+          <a class="proj-pkg" href="https://github.com/mostafasayed/prompt-cache" target="_blank" rel="noopener">prompt-cache</a>
+          <a class="proj-pkg" href="https://github.com/mostafasayed/llm-retry-guard" target="_blank" rel="noopener">llm-retry-guard</a>
+          <a class="proj-pkg" href="https://github.com/mostafasayed/token-budget-guard" target="_blank" rel="noopener">token-budget-guard</a>
+          <a class="proj-pkg" href="https://github.com/mostafasayed/ai-request-logger" target="_blank" rel="noopener">ai-request-logger</a>
+        </div>
+      </div>
+
+      <div class="proj-item">
+        <a class="proj-title" href="https://github.com/mostafasayed/ts-package-init" target="_blank" rel="noopener">ts-package-init <span class="src">GitHub</span></a>
+        <p class="proj-desc">A TypeScript scaffolding CLI supporting backend, library, CLI, monorepo, NestJS, and Moleculer presets, with ESM/CommonJS, ESLint, and Prettier.</p>
+      </div>
+    </section>
+
+    <section class="block">
       <h2>Core skills</h2>
 
       <div class="skill-group">
@@ -439,11 +491,22 @@
         <div class="chips">
           <span class="chip">Node.js</span>
           <span class="chip">TypeScript</span>
+          <span class="chip">Python</span>
           <span class="chip">NestJS</span>
+          <span class="chip">FastAPI</span>
           <span class="chip">Microservices</span>
           <span class="chip">REST APIs</span>
           <span class="chip">Event-Driven Architecture</span>
           <span class="chip">Clean Architecture</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-label">messaging &amp; queues</p>
+        <div class="chips">
+          <span class="chip">RabbitMQ</span>
+          <span class="chip">AWS SNS</span>
+          <span class="chip">AWS SQS</span>
         </div>
       </div>
 
@@ -463,6 +526,16 @@
         <div class="chips">
           <span class="chip">React</span>
           <span class="chip">Next.js</span>
+          <span class="chip">React Native</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-label">ai-assisted development</p>
+        <div class="chips">
+          <span class="chip">GitHub Copilot</span>
+          <span class="chip">Claude Code</span>
+          <span class="chip">OpenAI Codex</span>
         </div>
       </div>
     </section>
