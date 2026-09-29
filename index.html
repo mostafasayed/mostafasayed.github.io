@@ -4,25 +4,30 @@
   <meta charset="UTF-8" />
   <title>Mostafa Hanafy — Senior Full Stack Engineer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Senior Full Stack Engineer specializing in backend systems, data-intensive systems, microservices, Node.js, TypeScript, and AWS." />
+
+  <meta name="description" content="Mostafa Hanafy — Senior Full Stack Engineer with 10+ years of experience building production systems with Node.js, TypeScript, Python, React, PostgreSQL, AWS, Docker, Kubernetes, distributed systems, and AI-enabled applications." />
+
+  <link rel="canonical" href="https://mostafasayed.github.io/" />
 
   <!-- Open Graph / LinkedIn -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Mostafa Hanafy — Senior Full Stack Engineer" />
-  <meta property="og:description" content="Backend-focused Senior Full Stack Engineer with experience in microservices, distributed systems, data-intensive systems and AWS." />
+  <meta property="og:description" content="Senior Full Stack Engineer specializing in backend systems, distributed architectures, React applications, Python, cloud infrastructure, production reliability, and AI-enabled engineering." />
   <meta property="og:url" content="https://mostafasayed.github.io/" />
   <meta property="og:image" content="https://mostafasayed.github.io/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Mostafa Hanafy — Senior Full Stack Engineer" />
-  <meta name="twitter:description" content="Backend-focused Senior Full Stack Engineer with experience in microservices, distributed systems, data-intensive systems and AWS." />
+  <meta name="twitter:description" content="10+ years building scalable full-stack and backend systems with Node.js, TypeScript, Python, React, PostgreSQL, AWS, Docker, Kubernetes, and AI-enabled tooling." />
   <meta name="twitter:image" content="https://mostafasayed.github.io/og-image.png" />
 
+  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='64'%20height='64'%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%230b0f17'/%3E%3Ctext%20x='32'%20y='45'%20font-family='ui-monospace,monospace'%20font-size='40'%20font-weight='700'%20fill='%2334d399'%20text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
 
-  <!-- Set theme before paint to avoid a flash -->
+  <!-- Set theme before paint -->
   <script>
     (function () {
       var t = localStorage.getItem("theme");
@@ -65,7 +70,6 @@
     }
 
     * { box-sizing: border-box; }
-
     html, body { height: 100%; }
 
     body {
@@ -78,7 +82,6 @@
       transition: background 0.3s ease, color 0.3s ease;
     }
 
-    /* Blueprint grid + accent glow */
     .backdrop {
       position: fixed;
       inset: 0;
@@ -145,8 +148,8 @@
       animation: pulse 2.4s ease-out infinite;
     }
     @keyframes pulse {
-      0%   { box-shadow: 0 0 0 0 var(--glow); }
-      70%  { box-shadow: 0 0 0 7px transparent; }
+      0% { box-shadow: 0 0 0 0 var(--glow); }
+      70% { box-shadow: 0 0 0 7px transparent; }
       100% { box-shadow: 0 0 0 0 transparent; }
     }
 
@@ -167,7 +170,7 @@
     .toggle:hover { border-color: var(--line-strong); }
     .toggle:active { transform: scale(0.94); }
 
-    /* Hero — the one bold element: a service status readout */
+    /* Hero */
     .hero { padding: 6px 0 8px; }
 
     .name {
@@ -188,7 +191,7 @@
 
     .summary {
       margin: 0 0 26px;
-      max-width: 62ch;
+      max-width: 68ch;
       color: var(--text);
     }
 
@@ -260,7 +263,7 @@
       white-space: nowrap;
     }
     .xp-org { margin: 3px 0 0; color: var(--accent); font-size: 14px; font-weight: 500; }
-    .xp-desc { margin: 8px 0 0; color: var(--muted); max-width: 68ch; font-size: 14.5px; }
+    .xp-desc { margin: 8px 0 0; color: var(--muted); max-width: 72ch; font-size: 14.5px; }
     .xp-earlier {
       margin: 18px 0 0;
       padding-top: 16px;
@@ -287,7 +290,7 @@
       font-weight: 500;
       color: var(--muted);
     }
-    .proj-desc { margin: 7px 0 0; color: var(--muted); max-width: 68ch; font-size: 14.5px; }
+    .proj-desc { margin: 7px 0 0; color: var(--muted); max-width: 72ch; font-size: 14.5px; }
     .proj-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 11px; }
     a.proj-pkg {
       font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
@@ -301,7 +304,7 @@
     }
     a.proj-pkg:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
 
-    /* Skills — grouped */
+    /* Skills */
     .skill-group { margin-bottom: 20px; }
     .skill-group:last-child { margin-bottom: 0; }
     .skill-label {
@@ -320,12 +323,8 @@
       color: var(--text);
     }
 
-    /* Resume + links */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
+    /* Links */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     @media (max-width: 620px) { .two-col { grid-template-columns: 1fr; } }
 
     .btn {
@@ -362,7 +361,7 @@
       font-weight: 500;
       color: var(--muted);
     }
-    .writing-desc { margin: 7px 0 0; color: var(--muted); max-width: 68ch; font-size: 14.5px; }
+    .writing-desc { margin: 7px 0 0; color: var(--muted); max-width: 72ch; font-size: 14.5px; }
 
     a { color: var(--accent); text-decoration: none; font-weight: 500; }
     a:hover { text-decoration: underline; }
@@ -380,13 +379,9 @@
     }
     footer .mono { font-size: 12.5px; }
 
-    :focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-      border-radius: 6px;
-    }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
 
-    /* Single orchestrated page-load reveal, hero only */
+    /* Page-load reveal */
     @media (prefers-reduced-motion: no-preference) {
       .reveal { opacity: 0; transform: translateY(10px); animation: rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
       .reveal:nth-child(1) { animation-delay: 0.02s; }
@@ -395,9 +390,6 @@
       .reveal:nth-child(4) { animation-delay: 0.20s; }
       @keyframes rise { to { opacity: 1; transform: none; } }
     }
-
-    /* ATS-only keywords */
-    .ats-keywords { position: absolute; left: -9999px; top: -9999px; height: 0; overflow: hidden; }
   </style>
 </head>
 
@@ -405,31 +397,49 @@
   <div class="backdrop"></div>
 
   <div class="wrap">
+    <!-- Header -->
     <div class="topbar">
-      <a class="brand" href="/" aria-label="Home">mostafa<b>.hanafy</b></a>
+      <a class="brand" href="mailto:mostafa.s.hanafy@gmail.com" aria-label="Email Mostafa Hanafy">
+        mostafa.s.hanafy<b>@gmail.com</b>
+      </a>
+
       <div class="topbar-right">
-        <span class="status"><span class="dot"></span> Available for work</span>
+        <span class="status">
+          <span class="dot"></span>
+          Open to Senior / Staff opportunities
+        </span>
+
         <button class="toggle" id="toggle" onclick="toggleTheme()" aria-label="Toggle color theme">
           <span id="toggleIcon">☀️</span>
         </button>
       </div>
     </div>
 
+    <!-- Hero -->
     <section class="hero">
       <h1 class="name reveal">Mostafa Hanafy</h1>
-      <p class="role reveal">Senior Full Stack Engineer — <em>backend &amp; distributed systems</em></p>
+
+      <p class="role reveal">
+        Senior Full Stack Engineer —
+        <em>backend, distributed systems &amp; production engineering</em>
+      </p>
+
       <p class="summary reveal">
-        For 10+ years I've built scalable backend systems and modern web applications with a focus on clean architecture,
-        reliability, and production readiness — microservices, REST APIs, event-driven workflows, and cloud on AWS.
+        Senior Full Stack Engineer with 10+ years of experience designing, building, deploying, and
+        operating production applications across cloud and on-premise environments. I specialize in
+        backend systems, distributed architectures, modern web applications, and AI-enabled tooling
+        using Node.js, TypeScript, Python, React, PostgreSQL, AWS, Docker, and Kubernetes.
       </p>
 
       <dl class="readout mono reveal">
-        <div class="row"><dt>focus</dt><dd>Microservices, event-driven systems, reliability</dd></div>
-        <div class="row"><dt>stack</dt><dd>Node.js, TypeScript, AWS, Kubernetes</dd></div>
-        <div class="row"><dt>status</dt><dd class="ok">Open to new opportunities</dd></div>
+        <div class="row"><dt>focus</dt><dd>Backend systems, distributed architecture, reliability</dd></div>
+        <div class="row"><dt>stack</dt><dd>Node.js, TypeScript, Python, React, PostgreSQL, AWS</dd></div>
+        <div class="row"><dt>ai</dt><dd>RAG, LLM integrations, AI-assisted engineering</dd></div>
+        <div class="row"><dt>location</dt><dd>Abu Dhabi, UAE</dd></div>
       </dl>
     </section>
 
+    <!-- Experience -->
     <section class="block">
       <h2>Experience</h2>
 
@@ -439,7 +449,14 @@
           <span class="xp-date">Jan 2022 – Present</span>
         </div>
         <p class="xp-org">AirCarbon Technology Ltd · UAE</p>
-        <p class="xp-desc">Design and build scalable Node.js/TypeScript microservices and REST APIs for production trading and marketplace workflows, alongside React/TypeScript apps and Python/FastAPI internal services. Build event-driven systems on RabbitMQ/SNS/SQS with idempotency and retry handling, ship containerized services on Docker, Kubernetes, and CI/CD, and own production incident response and root-cause analysis.</p>
+        <p class="xp-desc">
+          Design and develop scalable Node.js/TypeScript microservices and REST APIs supporting
+          production trading and marketplace workflows. Build React/TypeScript applications and
+          Python/FastAPI internal services, design event-driven systems using RabbitMQ, SNS, and SQS
+          with idempotency and retry handling, and deploy containerized services using Docker,
+          Kubernetes, and CI/CD. Own production troubleshooting and incident response using logs,
+          metrics, health checks, and root-cause analysis to improve reliability, performance, and uptime.
+        </p>
       </div>
 
       <div class="xp-item">
@@ -448,7 +465,12 @@
           <span class="xp-date">Apr 2018 – Dec 2021</span>
         </div>
         <p class="xp-org">Dynamic Smart Solutions · UAE</p>
-        <p class="xp-desc">Customized Odoo ERP solutions in Python and built Node.js/React portals and REST APIs to extend them. Delivered bilingual Arabic/English apps with RTL interfaces, ERP-integrated attendance and mailing systems, and a mobile ERP reporting app for real-time analytics.</p>
+        <p class="xp-desc">
+          Developed and customized Odoo ERP solutions using Python, XML, and JavaScript, alongside
+          Node.js/React portals and REST APIs. Built bilingual Arabic/English enterprise applications
+          with RTL interfaces, ERP-integrated operational workflows, attendance and mailing systems,
+          and a mobile ERP reporting application for real-time analytics.
+        </p>
       </div>
 
       <div class="xp-item">
@@ -457,18 +479,42 @@
           <span class="xp-date">Jan 2015 – Jan 2018</span>
         </div>
         <p class="xp-org">Selective Systems · KSA</p>
-        <p class="xp-desc">Led engineers delivering enterprise Odoo platforms — mentoring developers and managing cloud and on-premise deployments and client integrations.</p>
+        <p class="xp-desc">
+          Led engineers delivering enterprise Odoo platforms, mentoring developers and managing cloud
+          and customer-hosted on-premise deployments, application releases, integrations, and production
+          environments.
+        </p>
       </div>
 
-      <p class="xp-earlier">Earlier: Freelance full-stack work (Upwork), Teaching Assistant at ITI, and OpenERP Developer — full history in the <a href="/Mostafa-Hanafy-Resume.pdf" target="_blank" rel="noopener">résumé PDF</a>.</p>
+      <p class="xp-earlier">
+        Earlier experience includes freelance full-stack development, Teaching Assistant at ITI, and
+        OpenERP development. Full history is available in the
+        <a href="/Mostafa-Hanafy-Resume.pdf" target="_blank" rel="noopener">résumé PDF</a>.
+      </p>
     </section>
 
+    <!-- Résumé & links -->
+    <section class="block">
+      <h2>Résumé &amp; links</h2>
+      <div class="two-col">
+        <a class="btn" href="/Mostafa-Hanafy-Resume.pdf" target="_blank" rel="noopener"><span class="ico">📄</span> Download PDF résumé</a>
+        <a class="btn" href="https://github.com/mostafasayed" target="_blank" rel="noopener"><span class="ico">🐙</span> GitHub</a>
+        <a class="btn" href="https://linkedin.com/in/mostafa-s-hanafy" target="_blank" rel="noopener"><span class="ico">💼</span> LinkedIn</a>
+        <a class="btn" href="mailto:mostafa.s.hanafy@gmail.com"><span class="ico">✉️</span> Email</a>
+      </div>
+    </section>
+
+    <!-- Projects -->
     <section class="block">
       <h2>Projects</h2>
 
       <div class="proj-item">
         <span class="proj-title">AI Request Layer <span class="src">open source</span></span>
-        <p class="proj-desc">A modular toolkit of npm packages for building reliable, observable, and cost-efficient LLM applications in production.</p>
+        <p class="proj-desc">
+          A modular toolkit for building reliable and cost-aware LLM applications, including prompt
+          caching, retry and backoff strategies, token-budget controls, structured request logging,
+          latency tracking, and estimated cost monitoring.
+        </p>
         <div class="proj-links">
           <a class="proj-pkg" href="https://github.com/mostafasayed/prompt-cache" target="_blank" rel="noopener">prompt-cache</a>
           <a class="proj-pkg" href="https://github.com/mostafasayed/llm-retry-guard" target="_blank" rel="noopener">llm-retry-guard</a>
@@ -478,16 +524,33 @@
       </div>
 
       <div class="proj-item">
-        <a class="proj-title" href="https://github.com/mostafasayed/ts-package-init" target="_blank" rel="noopener">ts-package-init <span class="src">GitHub</span></a>
-        <p class="proj-desc">A TypeScript scaffolding CLI supporting backend, library, CLI, monorepo, NestJS, and Moleculer presets, with ESM/CommonJS, ESLint, and Prettier.</p>
+        <a class="proj-title" href="https://github.com/mostafasayed/production-rag-platform" target="_blank" rel="noopener">
+          RAG Document Platform <span class="src">Python / FastAPI</span>
+        </a>
+        <p class="proj-desc">
+          A document-processing and retrieval pipeline using Python, FastAPI, embeddings,
+          PostgreSQL/pgvector, and LLM APIs to ingest PDFs, chunk content, perform vector search, and
+          generate grounded answers from retrieved context.
+        </p>
+      </div>
+
+      <div class="proj-item">
+        <a class="proj-title" href="https://github.com/mostafasayed/ts-package-init" target="_blank" rel="noopener">
+          ts-package-init <span class="src">GitHub</span>
+        </a>
+        <p class="proj-desc">
+          A TypeScript project scaffolding CLI supporting backend, library, CLI, monorepo, NestJS, and
+          Moleculer presets with ESM/CommonJS, ESLint, Prettier, and production-ready defaults.
+        </p>
       </div>
     </section>
 
+    <!-- Core Skills -->
     <section class="block">
       <h2>Core skills</h2>
 
       <div class="skill-group">
-        <p class="skill-label">backend</p>
+        <p class="skill-label">backend &amp; architecture</p>
         <div class="chips">
           <span class="chip">Node.js</span>
           <span class="chip">TypeScript</span>
@@ -495,9 +558,17 @@
           <span class="chip">NestJS</span>
           <span class="chip">FastAPI</span>
           <span class="chip">Microservices</span>
-          <span class="chip">REST APIs</span>
           <span class="chip">Event-Driven Architecture</span>
-          <span class="chip">Clean Architecture</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-label">data</p>
+        <div class="chips">
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">MongoDB</span>
+          <span class="chip">Redis</span>
         </div>
       </div>
 
@@ -517,39 +588,46 @@
           <span class="chip">Docker</span>
           <span class="chip">Kubernetes</span>
           <span class="chip">CI/CD</span>
+          <span class="chip">Linux</span>
+          <span class="chip">Nginx</span>
           <span class="chip">Observability</span>
         </div>
       </div>
 
       <div class="skill-group">
-        <p class="skill-label">frontend</p>
+        <p class="skill-label">frontend &amp; mobile</p>
         <div class="chips">
           <span class="chip">React</span>
           <span class="chip">Next.js</span>
           <span class="chip">React Native</span>
+          <span class="chip">Accessibility</span>
+          <span class="chip">RTL / i18n</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <p class="skill-label">ai engineering</p>
+        <div class="chips">
+          <span class="chip">LLM Integration</span>
+          <span class="chip">RAG</span>
+          <span class="chip">Embeddings</span>
+          <span class="chip">Vector Search</span>
+          <span class="chip">pgvector</span>
+          <span class="chip">Prompt Caching</span>
         </div>
       </div>
 
       <div class="skill-group">
         <p class="skill-label">ai-assisted development</p>
         <div class="chips">
-          <span class="chip">GitHub Copilot</span>
           <span class="chip">Claude Code</span>
+          <span class="chip">GitHub Copilot</span>
           <span class="chip">OpenAI Codex</span>
         </div>
       </div>
     </section>
 
-    <section class="block">
-      <h2>Résumé &amp; links</h2>
-      <div class="two-col">
-        <a class="btn" href="/Mostafa-Hanafy-Resume.pdf" target="_blank" rel="noopener"><span class="ico">📄</span> Download PDF résumé</a>
-        <a class="btn" href="https://github.com/mostafasayed" target="_blank" rel="noopener"><span class="ico">🐙</span> GitHub</a>
-        <a class="btn" href="https://linkedin.com/in/mostafa-s-hanafy" target="_blank" rel="noopener"><span class="ico">💼</span> LinkedIn</a>
-        <a class="btn" href="mailto:mostafa.s.hanafy@gmail.com"><span class="ico">✉️</span> Email</a>
-      </div>
-    </section>
-
+    <!-- Writing -->
     <section class="block">
       <h2>Writing &amp; knowledge sharing</h2>
 
@@ -578,29 +656,22 @@
         <a class="writing-title" href="https://www.linkedin.com/posts/mostafa-s-hanafy_ever-had-to-deal-with-multi-step-operations-activity-7405846592303370241-vxgO?utm_source=share&utm_medium=member_desktop&rcm=ACoAABDkWNEBxUCEvScdvUzQC57bvaxHQD8Ir2o" target="_blank" rel="noopener">
           Multi-step operations across services (Saga) <span class="src">LinkedIn</span>
         </a>
-        <p class="writing-desc">Coordinating multi-step operations across services with the saga pattern — compensating actions that keep data consistent without distributed locks.</p>
+        <p class="writing-desc">Coordinating multi-step operations across services using the Saga pattern and compensating actions without distributed locks.</p>
       </div>
 
       <div class="writing-item">
         <a class="writing-title" href="https://www.linkedin.com/posts/mostafa-s-hanafy_clean-prisma-transaction-pattern-using-transaction-activity-7412939021636755458-B2Z9?utm_source=share&utm_medium=member_desktop&rcm=ACoAABDkWNEBxUCEvScdvUzQC57bvaxHQD8Ir2o" target="_blank" rel="noopener">
-          Database transactions (TypeORM / Prisma) <span class="src">LinkedIn</span>
+          Database transactions with TypeORM / Prisma <span class="src">LinkedIn</span>
         </a>
-        <p class="writing-desc">A clean transaction pattern in Prisma and TypeORM — grouping writes so they commit or roll back together.</p>
+        <p class="writing-desc">A clean transaction pattern for grouping writes so they commit or roll back together safely.</p>
       </div>
     </section>
 
+    <!-- Footer -->
     <footer>
       <span>© <span id="year"></span> Mostafa Hanafy</span>
-      <span class="mono">Built as a static page · no trackers</span>
+      <span class="mono"><a href="https://mostafasayed.github.io/">mostafasayed.github.io</a></span>
     </footer>
-
-    <!-- ATS Keywords (hidden visually, readable by bots) -->
-    <div class="ats-keywords">
-      Senior Full Stack Engineer, Backend Engineer, Node.js Developer, TypeScript Developer, Microservices,
-      Distributed Systems, REST API, GraphQL, Event Driven Architecture, Message Queue, RabbitMQ, Kafka,
-      Clean Architecture, DDD, CQRS, Observability, Logging, Tracing, Correlation ID, AWS, Docker, Kubernetes,
-      CI/CD, GitHub Actions, PostgreSQL, Redis, System Design, Performance, Reliability Engineering
-    </div>
   </div>
 
   <script>
